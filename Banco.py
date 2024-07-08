@@ -19,10 +19,15 @@ while True:
 
     if opcao == "d":
         print("Depósito")
+    
         quant = float(input("Informe quanto será depositado: "))
-        saldo += quant
-        print(f"O seu saldo atual é de {saldo} após depositar {quant}")
-        extrato += f'Depósito: R${quant:.2f}\n'
+
+        if quant > 0:
+            saldo += quant
+            print(f"O seu saldo atual é de {saldo} após depositar {quant}")
+            extrato += f'Depósito: R${quant:.2f}\n'
+        else:
+            print("Valor inválido!")
 
 
 
