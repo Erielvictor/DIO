@@ -12,18 +12,18 @@ class Marcenaria:
 
     def construir(self):
         
-        global tempo
-        tempo = self.tamanho / 2
+        
+        self.tempo = self.tamanho / 2
 
-        print(f"A construção de um {self.movel} demora {tempo} dia(s)!")
-        for i in range(int(tempo)):
-            sleep(tempo)
+        print(f"A construção de um {self.movel} demora {self.tempo} dia(s)!")
+        for i in range(int(self.tempo)):
+            sleep(self.tempo)
             print(f"Dia {i + 1}")
         
 
     def enviar(self):
 
-        entrega = tempo * 5
+        entrega = self.tempo * 5
 
         if not self.enviar:
             print("O móvel não foi enviado")
